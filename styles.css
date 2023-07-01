@@ -19,12 +19,13 @@ h1 {
     margin: 0;
 }
 
-.canvas {
+#canvas {
     width: 550px;
     height: 550px;
     margin-bottom: 1rem ;
     margin: 0;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
 }
 
 .controls {
@@ -96,4 +97,8 @@ button:hover {
 
 #eraser {
     margin: 0 1rem;
+}
+
+.canvasItem {
+    background-color: white;
 }
