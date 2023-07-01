@@ -11,15 +11,20 @@ let canvasSize = slider.value;
 
 //let canvasSize = slider.value;
 
+const canvas = document.getElementById('canvas')
+
 const createDivs = (numOfDivs) => {
     for(let i = 0; i < numOfDivs; i++){
         let element = document.createElement("div");
         element.classList.add("canvasItem");
-        document.getElementById('canvas').appendChild(element);
+        canvas.appendChild(element);
     }
+
+    canvas.style.gridTemplateColumns = `repeat(${Math.sqrt(numOfDivs)}, 1fr)`;
+    canvas.style.gridTemplateRows = `repeat(${Math.sqrt(numOfDivs)}, 1fr)`;
 };
 
-function removeAllChildNodes(parent) {
+const removeAllChildNodes = (parent) => {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
@@ -29,5 +34,7 @@ function removeAllChildNodes(parent) {
 
 slider.oninput = function() {
     output.innerHTML = (`${this.value} x ${this.value}`);
+    removeAllChildNodes(canvas);
+    createDivs(this.value * this.value);
   }
 
