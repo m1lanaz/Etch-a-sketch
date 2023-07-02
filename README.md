@@ -5,6 +5,6 @@
 
 
 # Functionality
-📌 Draw on etch-a-sketch by holding left mouse button down
-📌 Adjust canvas size 
-📌 Clear canvas 
+📌 Draw on etch-a-sketch by holding left mouse button down__
+📌 Adjust canvas size__
+📌 Clear canvas__
